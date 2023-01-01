@@ -1,0 +1,68 @@
+body {
+    background-color: #16161a;
+    color: #fffffe;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/*
+    Header
+*/
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.palette {
+    font-size: 4em;
+}
+
+.color-to-guess {
+    height: 100px;
+    width: 300px;
+    background-color: red;
+    margin: auto;  
+    margin-top: 50px;
+}
+
+/*
+    Choices
+*/
+
+.choices {
+    display: flex;
+    margin: auto;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice {
+    margin: 20px;
+    height: 100px;
+    line-height: 100px;
+    width: 300px;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 1.5em;
+    transition: all .3s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.choice:hover {
+    transform: scale(1.05);
+}
+
+.wrong-answer {
+    background-color: red;
+}
+
+.right-answer {
+    background-color: green;
+}
