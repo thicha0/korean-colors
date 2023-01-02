@@ -7,11 +7,9 @@
 - En bas à gauche liste des couleurs
 
 TODO:
+- ajouter toutes les couleurs (arc en ciel, noir et blanc etc...)
 - check colors of website
-- liste des couleurs
-- code pour ajouter les couleurs
-- tooltip
-- smooth
+- smooth animation selection + snackbar success
 
 Later:
 - Random object (svg ?) to guess

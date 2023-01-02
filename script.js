@@ -38,11 +38,14 @@ const colors = [
 
 const colorToGuess = document.querySelector('.color-to-guess')
 const choiceDivs = document.querySelectorAll('.choice')
+const btnShowColors = document.querySelector('.btn-show-colors')
+const colorList = document.querySelector('.color-list')
 
 const numberOfChoices = 4
 let lastQuestions = []
 let choices = []
 let currentAnswer;
+let showColorList = false
 
 function getRandomColor() {
     const index = Math.floor(Math.random() * colors.length)
@@ -84,7 +87,6 @@ function newGuess() {
 function checkAnswer() {
     const index = this.dataset.index
     const colorSelected = choices[index]
-    console.log({currentAnswer, colorSelected})
     if (colorSelected !== currentAnswer) {
         this.classList.add('wrong-answer')
     } else {
@@ -99,8 +101,32 @@ function checkAnswer() {
     }
 }
 
+function setupListColors() {
+    let html = ''
+    colors.forEach(color => {
+        html += `<div class="color-line">
+            <div style="background-color: ${color.color}" class="square"></div>
+            ${color.korean}
+            <i class="color-english">${color.english}</i>
+        </div>`
+    })
+    colorList.innerHTML = html
+}
+
+function handleShowColors() {
+    if (!showColorList) {
+        colorList.style.visibility = 'visible'
+    } else {
+        colorList.style.visibility = 'hidden'
+    }
+    showColorList = !showColorList
+}
+
 choiceDivs.forEach(div => {
     div.addEventListener('click', checkAnswer)
 })
 
+btnShowColors.addEventListener('click', handleShowColors)
+
+setupListColors()
 newGuess()

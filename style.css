@@ -18,6 +18,10 @@ header {
     font-size: 1.5em;
 }
 
+h1 {
+    vertical-align: center;
+}
+
 .palette {
     font-size: 4em;
 }
@@ -27,8 +31,48 @@ header {
     width: 300px;
     background-color: red;
     margin: auto;  
-    margin-top: 50px;
+    margin-top: 80px;
 }
+
+/*
+    Tooltip
+*/
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    background-color: lightblue;
+    color: black;
+    border-radius: 50px;
+    width: 25px;
+    height: 25px;
+    font-size: 0.5em;
+    vertical-align: middle;
+    transition: all .5s;
+}
+
+.tooltip:hover {
+    transform: scale(1.05);
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    border: 1px solid white;
+    background-color: lightblue;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 5px;
+    position: absolute;
+    font-size: 0.7em;
+    top: 40px;
+    left: -80px; 
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+} 
+
 
 /*
     Choices
@@ -65,4 +109,57 @@ header {
 
 .right-answer {
     background-color: green;
+}
+
+/*
+    Color list
+*/
+
+.btn-show-colors {
+    background-color: lightblue;
+    color: black;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    padding: 6px 12px;
+    font-size: 1.3em;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+}
+
+.color-list {
+    position: absolute;
+    visibility: hidden;
+    margin: 20px;
+    top: 50px;
+    padding: 6px 12px;
+    width: 150px;
+    right: 0;
+    font-size: 1.3em;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: lightblue;
+    color: black;
+}
+
+.color-line {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.square {
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.color-english {
+    margin-left: 5px;
+    font-size: 0.7em;
 }

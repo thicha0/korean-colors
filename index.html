@@ -8,9 +8,13 @@
 <body>
     <header>
         <span class="palette">🎨</span>
-        <h1>무슨 색이예요 ?</h1>
-        <p>What color is this ?</p>
-        <div class="color-to-guess"></div>
+        <h1>
+            무슨 색이예요 ?
+            <div class="tooltip">?
+                <span class="tooltiptext">What color is this ?</span>
+            </div>
+        </h1>
+            <div class="color-to-guess"></div>
     </header>
 
     <div class="choices">
@@ -18,6 +22,13 @@
         <div class="choice" data-index="1"></div>
         <div class="choice" data-index="2"></div>
         <div class="choice" data-index="3"></div>
+    </div>
+
+    <div class="btn-show-colors">
+        📝 Color list
+    </div>
+    <div class="color-list">
+        <!-- Insert colors here -->
     </div>
     <script src="script.js"></script>
 </body>
