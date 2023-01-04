@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Korean Colors</title>
+    <link rel="icon" type="image/x-icon" href="/palette.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <span class="palette">🎨</span>
         <h1>
-            무슨 색이예요 ?
-            <div class="tooltip">?
-                <span class="tooltiptext">What color is this ?</span>
-            </div>
+            <span class="korean">
+                무슨 색이예요 ?
+            </span>
         </h1>
-            <div class="color-to-guess"></div>
+
+        <object class="color-to-guess" type="image/svg+xml" data="paint.svg"></object>
     </header>
 
-    <div class="choices">
+    <div class="choices korean">
         <div class="choice" data-index="0"></div>
         <div class="choice" data-index="1"></div>
         <div class="choice" data-index="2"></div>
@@ -25,7 +26,7 @@
     </div>
 
     <div class="btn-show-colors">
-        📝 Color list
+        📖
     </div>
     <div class="color-list">
         <!-- Insert colors here -->

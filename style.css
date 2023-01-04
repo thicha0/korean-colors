@@ -1,10 +1,28 @@
+/*
+    Colors: https://www.happyhues.co/palettes/17
+*/
+
 body {
-    background-color: #16161a;
-    color: #fffffe;
+    background-color: #f3d2c1;
+    color: #001858;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     justify-content: center;
     align-items: center;
     margin: 0;
+}
+
+/*
+    Korean font
+*/
+
+@font-face {
+    font-family: BinggraeSamanco;
+    src: url('./BinggraeSamanco-Bold.ttf');
+}
+
+.korean {
+    font-family: BinggraeSamanco;
+    font-size: 1.5em;
 }
 
 /*
@@ -13,7 +31,7 @@ body {
 
 header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     margin-top: 20px;
     font-size: 1.5em;
 }
@@ -27,52 +45,10 @@ h1 {
 }
 
 .color-to-guess {
-    height: 100px;
-    width: 300px;
-    background-color: red;
+    height: 175px;
     margin: auto;  
-    margin-top: 80px;
+    margin-top: 20px;
 }
-
-/*
-    Tooltip
-*/
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-    background-color: lightblue;
-    color: black;
-    border-radius: 50px;
-    width: 25px;
-    height: 25px;
-    font-size: 0.5em;
-    vertical-align: middle;
-    transition: all .5s;
-}
-
-.tooltip:hover {
-    transform: scale(1.05);
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 200px;
-    border: 1px solid white;
-    background-color: lightblue;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 5px;
-    position: absolute;
-    font-size: 0.7em;
-    top: 40px;
-    left: -80px; 
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-} 
-
 
 /*
     Choices
@@ -91,7 +67,8 @@ h1 {
     height: 100px;
     line-height: 100px;
     width: 300px;
-    border: 1px solid white;
+    background-color: #fef6e4;
+    border: 3px solid #001858;
     text-align: center;
     font-size: 1.5em;
     transition: all .3s;
@@ -101,14 +78,28 @@ h1 {
 
 .choice:hover {
     transform: scale(1.05);
+    background-color: #f582ae;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
 }
 
 .wrong-answer {
-    background-color: red;
+    animation: .2s shake 0s 3;
+    border-color: red;
+    color: red;
 }
 
 .right-answer {
-    background-color: green;
+    transition: transform 5s;
+    transform: scale(1.2);
+    border-color: green;
+    color: green;
 }
 
 /*
@@ -116,7 +107,8 @@ h1 {
 */
 
 .btn-show-colors {
-    background-color: lightblue;
+    background-color: #8bd3dd;
+    border: 3px solid #001858;
     color: black;
     border-radius: 5px;
     position: absolute;
@@ -126,8 +118,9 @@ h1 {
     padding: 6px 12px;
     font-size: 1.3em;
     cursor: pointer;
-    width: 150px;
+    width: 30px;
     text-align: center;
+    user-select: none;
 }
 
 .color-list {
@@ -138,17 +131,17 @@ h1 {
     padding: 6px 12px;
     width: 150px;
     right: 0;
-    font-size: 1.3em;
+    font-size: 1.2em;
     border-radius: 5px;
-    border: 1px solid black;
-    background-color: lightblue;
-    color: black;
+    border: 3px solid #001858;
+    background-color: #fef6e4;
 }
 
 .color-line {
     display: flex;
     align-items: center;
     margin: 5px 0;
+    position: relative;
 }
 
 .square {
@@ -157,9 +150,5 @@ h1 {
     border-radius: 5px;
     vertical-align: middle;
     margin-right: 8px;
-}
-
-.color-english {
-    margin-left: 5px;
-    font-size: 0.7em;
+    border: 1px solid #001858;
 }

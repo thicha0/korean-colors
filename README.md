@@ -8,8 +8,10 @@
 
 TODO:
 - ajouter toutes les couleurs (arc en ciel, noir et blanc etc...)
-- check colors of website
 - smooth animation selection + snackbar success
+
+- add confetti success
+- add sound splash on color change + sound wrong answer
 
 Later:
 - Random object (svg ?) to guess

@@ -81,8 +81,21 @@ function newGuess() {
 
     const answerColor = pickAnswer()
     currentAnswer = answerColor
-    colorToGuess.style.backgroundColor = answerColor.color
+    changeSVGColor(answerColor.color)
 }
+
+function changeSVGColor(color) {
+    const image = colorToGuess.contentDocument
+    const svg = image.querySelector('svg')
+    const g = image.querySelector('g')
+    if (g) {
+        g.style.fill = color
+    } else {
+        setTimeout(() => {
+            changeSVGColor(color)
+        }, 10)
+    }
+  }
 
 function checkAnswer() {
     const index = this.dataset.index
@@ -106,19 +119,15 @@ function setupListColors() {
     colors.forEach(color => {
         html += `<div class="color-line">
             <div style="background-color: ${color.color}" class="square"></div>
-            ${color.korean}
-            <i class="color-english">${color.english}</i>
+            <span class="korean">${color.korean}</class>
         </div>`
     })
     colorList.innerHTML = html
 }
 
 function handleShowColors() {
-    if (!showColorList) {
-        colorList.style.visibility = 'visible'
-    } else {
-        colorList.style.visibility = 'hidden'
-    }
+    colorList.style.visibility = showColorList ? 'hidden' : 'visible'
+    btnShowColors.textContent = showColorList ? '📖' : '📕'
     showColorList = !showColorList
 }
 
