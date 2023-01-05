@@ -1,18 +1,8 @@
 # korean-
 
-- 무슨 색이예요? + tooltip (What color is this ?)
-- Random color appearing
-- 4 propositions (random disposition)
-- Au clic sur la proposition sélectionnée, vert ou rouge
-- En bas à gauche liste des couleurs
+TODO last update:
+- add btn sound on/off
+- add all colors to list
+- synchro splat + choices
 
-TODO:
-- ajouter toutes les couleurs (arc en ciel, noir et blanc etc...)
-- smooth animation selection + snackbar success
-
-- add confetti success
-- add sound splash on color change + sound wrong answer
-
-Later:
-- Random object (svg ?) to guess
-- Switch to add tooltip to choices (english)
+- add confetti success ?

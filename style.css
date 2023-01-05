@@ -34,6 +34,7 @@ header {
     margin-bottom: 20px;
     margin-top: 20px;
     font-size: 1.5em;
+    position: relative;
 }
 
 h1 {
@@ -48,6 +49,31 @@ h1 {
     height: 175px;
     margin: auto;  
     margin-top: 20px;
+    opacity: 0;
+}
+
+.btn-start {
+    height: 80px;
+    line-height: 80px;
+    width: 300px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fef6e4;
+    border: 3px solid #001858;
+    color: black;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 100px;
+    font-size: 1.8em;
+    transition: all .3s;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.btn-start:hover {
+    background-color: lightblue;
 }
 
 /*
@@ -60,6 +86,8 @@ h1 {
     padding: 20px;
     justify-content: center;
     align-items: center;
+    transition: all .3s;
+    opacity: 0;
 }
 
 .choice {
@@ -78,7 +106,7 @@ h1 {
 
 .choice:hover {
     transform: scale(1.05);
-    background-color: #f582ae;
+    background-color: lightblue;
 }
 
 @keyframes shake {
@@ -102,12 +130,38 @@ h1 {
     color: green;
 }
 
+@keyframes splat {
+    0% {
+        opacity: 0.5;
+        transform: scale(1.1);
+    }
+    20% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    70% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.active {
+    /* animation: 1s splat; */
+    transition: all 3s;
+    opacity: 0;
+    transform: scale(1.2);
+}
+
 /*
     Color list
 */
 
 .btn-show-colors {
-    background-color: #8bd3dd;
+    background-color: #fef6e4;
     border: 3px solid #001858;
     color: black;
     border-radius: 5px;
@@ -121,6 +175,11 @@ h1 {
     width: 30px;
     text-align: center;
     user-select: none;
+    transition: all .3s;
+}
+
+.btn-show-colors:hover {
+    background-color: lightblue;
 }
 
 .color-list {

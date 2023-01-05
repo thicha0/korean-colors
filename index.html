@@ -8,12 +8,16 @@
 </head>
 <body>
     <header>
-        <span class="palette">🎨</span>
+        <div class="palette">🎨</div>
         <h1>
             <span class="korean">
                 무슨 색이예요 ?
             </span>
         </h1>
+
+        <div class="btn-start korean">
+            시작 !
+        </div>
 
         <object class="color-to-guess" type="image/svg+xml" data="paint.svg"></object>
     </header>
@@ -31,6 +35,11 @@
     <div class="color-list">
         <!-- Insert colors here -->
     </div>
+
+    <audio id="right" src="right.mp3"></audio>
+    <audio id="wrong" src="wrong.mp3"></audio>
+    <audio id="splat" src="splat.mp3"></audio>
+
     <script src="script.js"></script>
 </body>
 </html>
