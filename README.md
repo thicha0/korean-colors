@@ -1,7 +1,7 @@
 # korean-
 
 TODO last update:
-- add all colors to list
 - synchro splat + choices
+- Import font in html
 
-- add confetti success ?
+- Setup in web server

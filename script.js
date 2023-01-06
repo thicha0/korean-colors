@@ -116,14 +116,23 @@ function newGuess() {
         choices[i] = getRandomColor()
     }
     
-    const answerColor = pickAnswer()
     choiceDivs.forEach(div => {
-        const index = div.dataset.index
-        div.textContent = choices[index].korean
+        div.textContent = ''
+        div.classList.add('flip')
     })
+    const answerColor = pickAnswer()
     currentAnswer = answerColor
     changeSVGColor(answerColor.color)
-    answerFound = false
+    setTimeout(() => {
+        answerFound = false
+        choiceDivs.forEach(div => {
+            div.classList.remove('flip')
+            setTimeout(() => {
+                const index = div.dataset.index
+                div.textContent = choices[index].korean
+            }, 100)
+        })
+    }, 1000)
 }
 
 function changeSVGColor(color) {

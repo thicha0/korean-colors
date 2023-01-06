@@ -102,11 +102,17 @@ h1 {
     transition: all .3s;
     cursor: pointer;
     border-radius: 5px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
 .choice:hover {
     transform: scale(1.05);
     background-color: lightblue;
+}
+
+.flip {
+    transform: rotateX(180deg);
 }
 
 @keyframes shake {
