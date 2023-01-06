@@ -2,12 +2,17 @@ const colors = [
     {
         english: 'red',
         korean: '빨간색',
-        color: '#FF6663'
+        color: '#C21010'
+    },
+    {
+        english: 'pink',
+        korean: '분훙색',
+        color: '#FF597B'
     },
     {
         english: 'orange',
         korean: '주황색',
-        color: '#FEB144'
+        color: 'orange'
     },
     {
         english: 'yellow',
@@ -17,22 +22,47 @@ const colors = [
     {
         english: 'green',
         korean: '초록색',
-        color: '#9EE09E'
+        color: '#379237'
+    },
+    {
+        english: 'lightgreen',
+        korean: '면두색',
+        color: '#D5F591'
     },
     {
         english: 'blue',
         korean: '파란색',
-        color: '#9EC1CF'
+        color: '#1167b1'
     },
     {
         english: 'indigo',
         korean: '남색',
-        color: '#8686AF'
+        color: '#03254c'
+    },
+    {
+        english: 'sky blue',
+        korean: '하늘색',
+        color: '#8ecae6'
     },
     {
         english: 'purple',
         korean: '보라색',
-        color: '#CC99C9'
+        color: '#6C00FF'
+    },
+    {
+        english: 'grey',
+        korean: '회색',
+        color: '#888888'
+    },
+    {
+        english: 'white',
+        korean: '횐색',
+        color: 'white'
+    },
+    {
+        english: 'black',
+        korean: '검정색',
+        color: 'black'
     },
 ]
 
@@ -73,7 +103,7 @@ function pickAnswer() {
     if (lastQuestions.includes(color)) return pickAnswer()
 
     lastQuestions.push(color)
-    if (lastQuestions.length > 3) {
+    if (lastQuestions.length > 4) {
         lastQuestions.shift()
     }
 
@@ -124,6 +154,9 @@ function checkAnswer() {
     } else {
         answerFound = true
         this.classList.add('right-answer')
+        party.confetti(this, {
+            count: party.variation.range(20, 40),
+        });
         colorToGuess.classList.add('active')
         rightSound.play()
         setTimeout(() => {
