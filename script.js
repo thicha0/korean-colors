@@ -183,7 +183,7 @@ function setupListColors() {
     colors.forEach(color => {
         html += `<div class="color-line">
             <div style="background-color: ${color.color}" class="square"></div>
-            <span class="korean">${color.korean}</class>
+            ${color.korean}
         </div>`
     })
     colorList.innerHTML = html
