@@ -215,3 +215,13 @@ btnShowColors.addEventListener('click', handleShowColors)
 btnStart.addEventListener('click', startGame)
 
 setupListColors()
+
+// Add font
+
+const font = new FontFace("BinggraeSamanco", "url(/assets/fonts/BinggraeSamanco-Bold.ttf)")
+document.fonts.add(font)
+font.load()
+
+document.fonts.ready.then(() => {
+    document.body.style.fontFamily = "BinggraeSamanco, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif";
+})

@@ -6,11 +6,6 @@
     Korean font
 */
 
-@font-face {
-    font-family: BinggraeSamanco;
-    src: url('/assets/fonts/BinggraeSamanco-Bold.ttf');
-}
-
 body {
     background-color: #f3d2c1;
     color: #001858;
@@ -218,9 +213,3 @@ h1 {
     margin-right: 8px;
     border: 1px solid #001858;
 }
-
-@media screen and (max-width: 600px) {
-    .choices {
-      background-color: red;
-    }
-  }
